@@ -9,8 +9,107 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                margin: 0px;   /*緊貼頂部(上下左右)，沒有空隙*/
+            }
+
+            #header {
+                width: 100%;
+                height: 10%;
+                text-align: center;
+                padding: 0;
+                margin: 0 auto;
+                margin: 0 auto;
+            }
+            #header a {
+                text-decoration: none;
+                color: black;
+            }
+            #header li {
+                padding: 10px;
+                width: 200px;     /*各子選單連結的寬度*/
+                height: 20px;     /*各子選單連結的高度*/
+                text-align: center; 
+            } 
+            #header div, li, ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            #header li.menu {
+                float: left;            /*讓主標題連結變成水平狀*/
+                padding: 0;
+                margin: 0;
+                width: 220px;           /*各主標題連結的寬度*/
+                height: 30px;           /*各主標題連結的高度*/
+                text-align: center;
+            }
+
+            /*隱藏子選單*/ 
+            #header li ul { display:none;} 
+            /* 滑鼠滑入顯示子選單 */ 
+            #header li:hover ul {  display: block; } 
+            /*頁首結尾*/
+
+            #main {
+                background-color:#FF00FF;
+                width:25%;
+                float:left;
+            }
+
+            #contect {
+                /* 設定header的高度 */
+                width: 75%;
+                height: 80%;
+                text-align: left;
+            }
+            #footer {
+                /* 設定header的高度 */
+                width:100%;
+                height:10%;
+                position:absolute;
+                bottom:0;
+                margin: 0 auto; 
+            }
+            #footer p{
+                bottom 0;
+                font:15px "微軟正黑體"; 
+                font-color: blue;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
-        <div>TODO write content</div>
-    </body>
+        <div id="header">
+            <img  src="image/pict.jpg" width="100%" height="100%">
+            <li class="menu"><a href="#">簡介</a>
+                <ul>
+                    <li><a href="#">關於、認識大湖</a></li>
+                    <li><a href="#">大湖歷史、事蹟</a></li>
+                </ul>
+            </li>
+            <li class="menu"><a href="#">活動照片與剪影</a>
+                <ul>
+                    <li><a href="#">柿子節</a></li>
+                    <li><a href="#">大湖國小營隊</a></li>
+                </ul>
+            </li>
+            <li class="menu"><a href="#">特色</a>
+                <ul>
+                    <li><a href="#">周邊景色</a></li>
+                    <li><a href="#">當地特產</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--內容區域-->
+    <div id="contect">
+    </div>
+    <!--底部區域-->
+    <div id="footer">
+        <p>南華大學資訊管理學系-檸檬吉他 資訊志工團隊</p>
+        <p>隊長-李佳龍 電話號碼:09cececece</p>
+    </div>
+</body>
 </html>
